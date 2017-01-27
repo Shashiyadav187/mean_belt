@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Doctor's Appointment</title>
+    
+    <!-- angular modules setup : Had issues with local library and just used angular cdn's -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+
+    <!-- app setup -->
+    <script type="text/javascript" src = "assets/app.js"></script>
+
+
+    <!-- controllers setup -->
+    <script type="text/javascript" src = "assets/controllers/loginController.js"></script>
+    <script type="text/javascript" src = "assets/controllers/dashboardController.js"></script>
+    <script type="text/javascript" src = "assets/controllers/appointmentController.js"></script>
+
+    <!-- factory setup -->
+    <script type="text/javascript" src = "assets/factories/userFactory.js"></script>
+    <script type="text/javascript" src = "assets/factories/Factory2.js"></script>
+    <script type="text/javascript" src = "assets/factories/appointmentFactory.js"></script>
+    <script type="text/javascript">
+    </script>
+  </head>
+
+  <body>
+
+        <div ng-view="" class="">
+
+        </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<div class="" ng-controller='dashboardController'>
+  <h1>doctor's appointment</h1>
+  <a href="#/logout">logout</a>
+  <p>{{current_user.name}}</p>
+  <label>search</label>
+  <input type="text" ng-model="search_input"><br>
+  <table>
+    <thead>
+      <tr>
+        <td>Date</td>
+        <td>Time</td>
+        <td>Patient Name</td>
+        <td>Complain</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="appointment in appointments | filter:search_input | orderBy:['date','time']">
+        <td>{{appointment.date | date:'MMM dd, yyyy'}}</td>
+        <td>{{appointment.time | date:'hh:mm a'}}</td>
+        <td>{{appointment._creator.name}}</td>
+        <td>{{appointment.complain}} <button ng-show='current_user._id==appointment._creator._id' ng-click='Delete(appointment)' type="button" name="Cancel">Cancel</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="#/appointment">Add new Appointment</a>
+  <!--using older stable version of Angular CDN, so don't need #! (hashbang) in href -->
+</div>
