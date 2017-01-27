@@ -40,19 +40,9 @@ function AppointmentController() {
                             }
                         }
                     })
-                } else {
-                    res.json({
-                        error: {
-                            errors: {
-                                more_errors: {
-                message: "Doctor Strange is booked up for that day. Please select a different day."
+                }
             }
-            }
-        }
         })
-        }
-    }
-    })
     };
     this.delete = function(req, res) {
         appointment.remove({
