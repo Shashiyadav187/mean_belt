@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html ng-app='app'>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Doctor's Appointment</title>
-    
-    <!-- angular modules setup : Had issues with local library and just used angular cdn's -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
 
-    <!-- app setup -->
-    <script type="text/javascript" src = "assets/app.js"></script>
+    <script type="text/javascript" src="assets/app.js"></script>
 
 
-    <!-- controllers setup -->
-    <script type="text/javascript" src = "assets/controllers/loginController.js"></script>
-    <script type="text/javascript" src = "assets/controllers/dashboardController.js"></script>
-    <script type="text/javascript" src = "assets/controllers/appointmentController.js"></script>
+    <script type="text/javascript" src="assets/controllers/loginController.js"></script>
+    <script type="text/javascript" src="assets/controllers/dashboardController.js"></script>
+    <script type="text/javascript" src="assets/controllers/appointmentController.js"></script>
 
-    <!-- factory setup -->
-    <script type="text/javascript" src = "assets/factories/userFactory.js"></script>
-    <script type="text/javascript" src = "assets/factories/Factory2.js"></script>
-    <script type="text/javascript" src = "assets/factories/appointmentFactory.js"></script>
+
+    <script type="text/javascript" src="assets/factories/userFactory.js"></script>
+    <script type="text/javascript" src="assets/factories/Factory2.js"></script>
+    <script type="text/javascript" src="assets/factories/appointmentFactory.js"></script>
     <script type="text/javascript">
     </script>
-  </head>
 
-  <body>
+    <style>
+        table,
+        th,
+        td {
+            border-width: 2px;
+            border-style: groove;
+            ;
+        }
 
-        <div ng-view="" class="">
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
 
-        </div>
-  </body>
+        table#t01 {
+            width: 100%;
+            background-color: #f1f1c1;
+        }
+
+        #logout {
+            text-align: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div ng-view="" class="">
+
+    </div>
+</body>
+
 </html>

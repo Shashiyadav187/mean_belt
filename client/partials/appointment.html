@@ -5,13 +5,12 @@
 
     <form class="" ng-submit='addAppointment(appointment)'>
         <label>Date:</label>
-        <input type="date" name="" value="" ng-model='appointment.date' style="margin-left: 32px;">
+        <input type="date" ng-model='appointment.date' style="margin-left: 32px;">
         <label>Time:</label>
-        <input type="time" name="" value="" ng-model='appointment.time'>
-        <br>
-        <br>
+        <input type="time" ng-model='appointment.time'>
+    <br>
+    <br>
         <label>Complain: </label>
-        <!--<textarea rows="4" cols="50" ng-model='appointment.complain'> -->
         <input type="text" size="36" ng-model='appointment.complain'>
         <input type="hidden" ng-model='appointment._creator'><br><br>
         <div>

@@ -3,20 +3,17 @@ var user = mongoose.model('User');
 
 function UserController(){
   this.index = function(req,res){
-    user.find({},function(err,results){
+    user.find({},function(err,response){
       if(err){
-        console.log(err);
       }else{
-        res.json(results);
+        res.json(response);
       };
     });
   };
   this.create = function(req,res){
     user.create(req.body,function(err,result){
       if(err){
-        console.log("!!!!! error creating user object. duplicate");
       }else{
-        console.log("success creating user object",result);
         res.json(result);
       };
     });
@@ -24,30 +21,18 @@ function UserController(){
   this.find = function(req,res){
     user.findOne({name:req.body.name},function(err,result){
       if(err){
-        console.log(err);
       }else{
-        console.log("found the user ",result)
         res.json(result)
       }
     })
   }
   this.show = function(req,res){
-    // user.findOne({_id:req.params.id},function(err,result){
-    //   if(err){
-    //     console.log(err);
-    //   }else{
-    //     console.log("found the user ",result)
-    //     res.json(result)
-    //   }
-    // })
     console.log(req.body)
   };
   this.findid = function(req,res){
     user.findOne({_id:req.body.id},function(err,result){
       if(err){
-        console.log(err);
       }else{
-        console.log("found the user by user ID",result)
         res.json(result)
       }
     })
